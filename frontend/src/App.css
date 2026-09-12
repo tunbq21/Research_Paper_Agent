@@ -86,16 +86,45 @@
 
 /* Messages */
 .message {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   max-width: 800px;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  
+  /* Modern Entry Animation */
+  opacity: 1;
+  translate: 0 0;
+  transition: opacity 0.4s ease-out, translate 0.4s ease-out;
+}
+
+@starting-style {
+  .message {
+    opacity: 0;
+    translate: 0 20px;
+  }
+}
+
+.message.user {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0 1.5rem;
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0;
 }
 
 .message-label {
   font-size: 0.8rem;
   color: var(--color-text-muted);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .message-content {
@@ -113,9 +142,9 @@
 
 /* Citations */
 .citation-block {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px dashed var(--color-border);
 }
 
 .citation-ref {
@@ -126,10 +155,16 @@
   font-weight: 600;
   color: var(--color-citation);
   background-color: var(--color-citation-bg);
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.6rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  vertical-align: middle;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  cursor: default;
+}
+
+.citation-ref:hover {
+  background-color: rgba(184, 123, 65, 0.2);
 }
 
 /* Input Area */
@@ -137,31 +172,48 @@
   padding: 2rem 4rem;
   background: var(--color-bg-panel);
   border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.02);
 }
 
 .input-wrapper {
   display: flex;
   max-width: 800px;
-  border: 1px solid var(--color-text-main);
+  border: 1px solid var(--color-border);
   background: var(--color-bg-main);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(54, 78, 104, 0.1);
 }
 
 .chat-input {
   flex: 1;
-  padding: 1rem;
+  padding: 1.25rem 1.5rem;
   border: none;
   background: transparent;
   outline: none;
+  font-size: 1.05rem;
 }
 
 .btn-send {
-  background: var(--color-text-main);
-  color: var(--color-bg-main);
-  padding: 0 2rem;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s ease;
+}
+
+.btn-send:hover:not(:disabled) {
+  background: #2a3c50;
 }
 
 .btn-send:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
