@@ -12,11 +12,16 @@
   },
   "dependencies": {
     "@google/genai": "^2.22.0",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
     "cors": "^2.8.6",
     "express": "^5.2.1",
+    "lucide-react": "^1.45.0",
     "multer": "^2.3.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
