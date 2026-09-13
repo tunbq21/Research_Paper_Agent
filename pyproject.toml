@@ -1,0 +1,25 @@
+[project]
+name = "research-paper-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=1.5.9",
+    "fastapi>=0.141.1",
+    "langchain>=1.4.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-core>=1.6.2",
+    "langchain-google-genai>=4.4.0",
+    "langchain-text-splitters>=1.1.2",
+    "langgraph>=1.2.11",
+    "loguru>=0.7.3",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+    "pymupdf>=1.28.2",
+    "python-dotenv>=1.2.3",
+    "python-multipart>=0.0.32",
+    "streamlit>=1.63.0",
+    "tavily-python>=0.8.1",
+    "uvicorn>=0.52.4",
+]
