@@ -1,0 +1,6 @@
+{
+  "name": "Research Paper Agent",
+  "description": "An intelligent agent for analyzing and answering questions about uploaded PDF research papers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
